@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharanya Punna — iOS & Frontend Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        appleBlue: '#0071e3',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .dark .glass {
+            background: rgba(22, 22, 23, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .swift-gradient {
+            background: linear-gradient(135deg, #FF5E3A 0%, #FF2A68 100%);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-[#f5f5f7] text-[#1d1d1f] dark:bg-[#000000] dark:text-[#f5f5f7] font-sans antialiased transition-colors duration-300">
+
+    <header class="fixed top-0 w-full z-50 glass border-b border-black/[0.04] dark:border-white/[0.06] transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+            <a href="#" class="font-semibold tracking-tight text-sm flex items-center gap-2">
+                <span class="swift-gradient w-3.5 h-3.5 rounded-full inline-block"></span>
+                sharanya.dev
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-xs font-medium text-[#86868b]">
+                <a href="#about" class="hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] transition-colors">About</a>
+                <a href="#skills" class="hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] transition-colors">Projects</a>
+                <a href="#education" class="hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] transition-colors">Education</a>
+                <a href="#connect" class="hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] transition-colors">Connect</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-black/[0.04] dark:hover:bg-white/[0.04] transition-colors" aria-label="Toggle Theme">
+                    <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
+                    <i data-lucide="sun" class="w-4 h-4 block dark:hidden"></i>
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-[#f5f5f7] dark:bg-[#000000] pt-24 px-8 hidden flex-col gap-5 text-lg font-medium transition-colors duration-300">
+        <a href="#about" class="mobile-link py-2 border-b border-black/[0.04] dark:border-white/[0.06]">About</a>
+        <a href="#skills" class="mobile-link py-2 border-b border-black/[0.04] dark:border-white/[0.06]">Skills</a>
+        <a href="#experience" class="mobile-link py-2 border-b border-black/[0.04] dark:border-white/[0.06]">Experience</a>
+        <a href="#projects" class="mobile-link py-2 border-b border-black/[0.04] dark:border-white/[0.06]">Projects</a>
+        <a href="#education" class="mobile-link py-2 border-b border-black/[0.04] dark:border-white/[0.06]">Education</a>
+        <a href="#connect" class="mobile-link py-2">Connect</a>
+    </div>
+
+    <main class="max-w-4xl mx-auto px-6 pt-20">
+        
+        <section id="about" class="min-h-[70vh] flex flex-col justify-center items-center text-center relative py-12">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.03] dark:bg-white/[0.05] border border-black/[0.04] dark:border-white/[0.04] text-[11px] font-medium uppercase tracking-wider text-[#86868b] mb-6">
+                <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
+                iOS &amp; Frontend Software Engineer
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl font-bold tracking-tight max-w-3xl leading-[1.1] mb-6">
+                Crafting elegant mobile ecosystems &amp; modern interfaces.
+            </h1>
+
+            <p class="text-base sm:text-lg text-[#86868b] max-w-2xl font-light mb-8 leading-relaxed">
+                Hi, I'm <span class="font-medium text-[#1d1d1f] dark:text-[#f5f5f7]">Sharanya Punna</span>. I specialize in native iOS architectures and responsive web frontends. Focused on transforming robust programmatic logic into fluid, beautiful user applications.
+            </p>
+
+<div class="flex flex-wrap items-center justify-center gap-3 w-full sm:w-auto">
+                <a href="mailto:punnasharanya007@gmail.com" class="w-full sm:w-auto px-5 py-2.5 bg-[#0071e3] hover:bg-[#0077ed] text-white text-xs font-medium rounded-full transition-all duration-200 flex items-center justify-center gap-2">
+                    <i data-lucide="mail" class="w-3.5 h-3.5"></i> Email Me
+                </a>
+                
+                <a href="https://www.linkedin.com/in/sharanya-punna/" target="_blank" class="w-full sm:w-auto px-5 py-2.5 bg-white dark:bg-[#1d1d1f] hover:bg-neutral-50 dark:hover:bg-[#2d2d2f] text-xs font-medium rounded-full transition-all duration-200 flex items-center justify-center gap-2 border border-black/[0.06] dark:border-white/[0.06]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0077b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    LinkedIn
+                </a>
+                
+                <a href="https://github.com/punnasharanya" target="_blank" class="w-full sm:w-auto px-5 py-2.5 bg-white dark:bg-[#1d1d1f] hover:bg-neutral-50 dark:hover:bg-[#2d2d2f] text-xs font-medium rounded-full transition-all duration-200 flex items-center justify-center gap-2 border border-black/[0.06] dark:border-white/[0.06]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    GitHub
+                </a>
+            </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-12 scroll-mt-14">
+            <div class="mb-8">
+                <h2 class="text-[11px] font-semibold tracking-widest uppercase text-[#86868b] mb-1">Capabilities</h2>
+                <p class="text-2xl font-bold tracking-tight">Core Competencies</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#1d1d1f] border border-black/[0.02] dark:border-white/[0.02] shadow-sm">
+                    <div class="text-orange-500 mb-3"><i data-lucide="smartphone" class="w-5 h-5"></i></div>
+                    <h3 class="text-sm font-semibold mb-2">iOS Development</h3>
+                    <p class="text-xs text-[#86868b] mb-4 font-light">Building clean mobile environments within structured UI frameworks.</p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-[#f5f5f7] dark:bg-[#2d2d2f]">Swift</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-[#f5f5f7] dark:bg-[#2d2d2f]">SwiftUI</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-[#f5f5f7] dark:bg-[#2d2d2f]">UIKit</span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#1d1d1f] border border-black/[0.02] dark:border-white/[0.02] shadow-sm">
+                    <div class="text-blue-500 mb-3"><i data-lucide="code-2" class="w-5 h-5"></i></div>
+                    <h3 class="text-sm font-semibold mb-2">Software Foundations</h3>
+                    <p class="text-xs text-[#86868b] mb-4 font-light">Formulating algorithm solutions and structural query validation pipelines.</p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-[#f5f5f7] dark:bg-[#2d2d2f]">Java (OOP)</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-[#f5f5f7] dark:bg-[#2d2d2f]">SQL </span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#1d1d1f] border border-black/[0.02] dark:border-white/[0.02] shadow-sm">
+                    <div class="text-purple-500 mb-3"><i data-lucide="layers" class="w-5 h-5"></i></div>
+                    <h3 class="text-sm font-semibold mb-2">Web Front-End</h3>
+                    <p class="text-xs text-[#86868b] mb-4 font-light">Crafting interactive layouts using valid semantic web tags and styling layouts.</p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-[#f5f5f7] dark:bg-[#2d2d2f]">HTML &amp; CSS</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-[#f5f5f7] dark:bg-[#2d2d2f]">JavaScript</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-[#f5f5f7] dark:bg-[#2d2d2f]">Git Control</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-12 scroll-mt-14">
+            <div class="mb-8">
+                <h2 class="text-[11px] font-semibold tracking-widest uppercase text-[#86868b] mb-1">Career Timeline</h2>
+                <p class="text-2xl font-bold tracking-tight">Professional History</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#1d1d1f] border border-black/[0.02] dark:border-white/[0.02] shadow-sm flex flex-col md:flex-row md:items-start justify-between gap-4">
+                    <div class="space-y-1">
+                        <span class="text-[10px] font-medium tracking-wide text-orange-500 uppercase">Jul 2025 – Present</span>
+                        <h3 class="text-base font-semibold">iOS Developer Apprentice</h3>
+                        <p class="text-xs text-[#86868b] font-medium">Next Education India Pvt. Ltd.</p>
+                        <p class="text-xs text-[#86868b] pt-2 font-light leading-relaxed">
+                            Maintained production elements for flagship iOS applications. Engineered custom layout hierarchies via UIKit, SwiftUI, and Xcode tools. Partnered along core engineers to integrate REST APIs and optimize concurrent UI performance.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#1d1d1f] border border-black/[0.02] dark:border-white/[0.02] shadow-sm flex flex-col md:flex-row md:items-start justify-between gap-4">
+                    <div class="space-y-1">
+                        <span class="text-[10px] font-medium tracking-wide text-blue-500 uppercase">Nov 2024 – May 2025</span>
+                        <h3 class="text-base font-semibold">Frontend &amp; Java Intern</h3>
+                        <p class="text-xs text-[#86868b] font-medium">PacketPrep India</p>
+                        <p class="text-xs text-[#86868b] pt-2 font-light leading-relaxed">
+                            Formulated layout styling paradigms across HTML and CSS platforms while gaining comprehensive validations in Core Java syntax, standard OOP paradigms, database queries, and version management control.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-12 scroll-mt-14">
+            <div class="mb-8">
+                <h2 class="text-[11px] font-semibold tracking-widest uppercase text-[#86868b] mb-1">Portfolio Showcase</h2>
+                <p class="text-2xl font-bold tracking-tight">Software &amp; Engineering Projects</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#1d1d1f] border border-black/[0.02] dark:border-white/[0.02] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-neutral-400 mb-3">
+                            <i data-lucide="radio" class="w-5 h-5 text-orange-500"></i>
+                            <span class="text-[10px] font-medium uppercase tracking-wider">Academic Research</span>
+                        </div>
+                        <h3 class="text-base font-semibold mb-2">Multiband Microstrip Patch Antenna Design</h3>
+                        <p class="text-xs text-[#86868b] font-light leading-relaxed">
+                            Designed a high-frequency layout engineering blueprint configured precisely for 5G cellular communication standard bands utilizing advanced Metamaterial structural modeling.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#1d1d1f] border border-black/[0.02] dark:border-white/[0.02] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-neutral-400 mb-3">
+                            <i data-lucide="cpu" class="w-5 h-5 text-blue-500"></i>
+                            <span class="text-[10px] font-medium uppercase tracking-wider">Hardware Logic</span>
+                        </div>
+                        <h3 class="text-base font-semibold mb-2">Floating-Point Multiplier Engine</h3>
+                        <p class="text-xs text-[#86868b] font-light leading-relaxed">
+                            Formulated and modeled a 32-bit arithmetic computational block completely built around the structural parameters of the standard IEEE-754 validation guidelines.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#1d1d1f] border border-black/[0.02] dark:border-white/[0.02] md:col-span-2">
+                    <div class="flex items-center justify-between text-neutral-400 mb-4">
+                        <i data-lucide="globe" class="w-5 h-5 text-purple-500"></i>
+                        <span class="text-[10px] font-medium uppercase tracking-wider">Functional Web Projects</span>
+                    </div>
+                    <h3 class="text-base font-semibold mb-3">Responsive Frontend Suite</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div class="p-3 bg-[#f5f5f7] dark:bg-[#2d2d2f] rounded-xl">
+                            <h4 class="text-xs font-semibold mb-1">Tribute Web Application</h4>
+                            <p class="text-[11px] text-[#86868b] font-light">Custom content layout properties built over clean structural semantic elements.</p>
+                        </div>
+                        <div class="p-3 bg-[#f5f5f7] dark:bg-[#2d2d2f] rounded-xl">
+                            <h4 class="text-xs font-semibold mb-1">Dynamic Event Portal</h4>
+                            <p class="text-[11px] text-[#86868b] font-light">Interactive contextual web portal designed utilizing responsive styling grids.</p>
+                        </div>
+                        <div class="p-3 bg-[#f5f5f7] dark:bg-[#2d2d2f] rounded-xl">
+                            <h4 class="text-xs font-semibold mb-1">Secure Registration Hub</h4>
+                            <p class="text-[11px] text-[#86868b] font-light">Form verification pipelines built through data validation interface elements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 p-6 rounded-2xl bg-white dark:bg-[#1d1d1f] border border-black/[0.02] dark:border-white/[0.02]">
+                <h3 class="text-xs font-semibold uppercase tracking-wider text-[#86868b] mb-3">Credentials &amp; Performance Indexes</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#86868b]">
+                    <div class="flex items-center gap-2"><i data-lucide="award" class="w-4 h-4 text-amber-500"></i> <span>TCS iON NQT Cognitive: <strong>79.76%</strong></span></div>
+                    <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500"></i> <span>Java &amp; Frontend Training Validation (PacketPrep)</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-12 scroll-mt-14">
+            <div class="mb-6">
+                <h2 class="text-[11px] font-semibold tracking-widest uppercase text-[#86868b] mb-1">Qualifications</h2>
+                <p class="text-2xl font-bold tracking-tight">Education</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                <div class="p-5 rounded-xl bg-white dark:bg-[#1d1d1f] border border-black/[0.02] dark:border-white/[0.02]">
+                    <span class="text-[#86868b] block mb-1">2020 – 2024</span>
+                    <h4 class="font-bold text-sm mb-1">B. Tech Graduation</h4>
+                    <p class="text-[#86868b]">Bhoj Reddy Engineering College for Women</p>
+                    <p class="text-[10px] text-neutral-400 mt-1">Affiliated to JNTU, Hyderabad</p>
+                </div>
+                <div class="p-5 rounded-xl bg-white dark:bg-[#1d1d1f] border border-black/[0.02] dark:border-white/[0.02]">
+                    <span class="text-[#86868b] block mb-1">2018 – 2020</span>
+                    <h4 class="font-bold text-sm mb-1">Intermediate Education</h4>
+                    <p class="text-[#86868b]">Sarath Junior College</p>
+                    <p class="text-[10px] text-neutral-400 mt-1">Telangana State Board of Intermediate Ed.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-white dark:bg-[#1d1d1f] border border-black/[0.02] dark:border-white/[0.02]">
+                    <span class="text-[#86868b] block mb-1">Completed 2018</span>
+                    <h4 class="font-bold text-sm mb-1">Class X Standard</h4>
+                    <p class="text-[#86868b]">Slate - The School</p>
+                    <p class="text-[10px] text-neutral-400 mt-1">Telangana State Board of Secondary Ed.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="connect" class="py-12 pb-24 scroll-mt-14">
+            <div class="p-8 rounded-3xl bg-white dark:bg-[#1d1d1f] border border-black/[0.02] dark:border-white/[0.02] text-center max-w-xl mx-auto space-y-6">
+                <h2 class="text-2xl font-bold tracking-tight">Let's build something together</h2>
+                <p class="text-xs text-[#86868b] leading-relaxed max-w-sm mx-auto">
+                    I am open to collaborations, projects, or professional opportunities in iOS and frontend engineering ecosystems. Reach out anytime.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+                    <a href="mailto:punnasharanya007@gmail.com" class="w-full sm:w-auto px-5 py-3 bg-[#0071e3] hover:bg-[#0077ed] text-white text-xs font-medium rounded-xl transition-colors duration-200 flex items-center justify-center gap-2">
+                        <i data-lucide="mail" class="w-4 h-4"></i> Send an Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/sharanya-punna/" target="_blank" class="w-full sm:w-auto px-5 py-2.5 bg-white dark:bg-[#1d1d1f] hover:bg-neutral-50 dark:hover:bg-[#2d2d2f] text-xs font-medium rounded-full transition-all duration-200 flex items-center justify-center gap-2 border border-black/[0.06] dark:border-white/[0.06]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0077b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-20 pt-6 border-t border-black/[0.04] dark:border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-neutral-400">
+                <p class="italic">Built for the web ecosystem.</p>
+                <p>&copy; 2026 Sharanya Punna. All rights reserved.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+
+        // Theme Toggle Controller
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+
+        // Mobile Sidebar Management
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            document.body.classList.toggle('overflow-hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            if(mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('data-lucide', 'menu');
+            } else {
+                icon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+    </script>
+</body>
+</html>
